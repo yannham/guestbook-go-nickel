@@ -1,13 +1,11 @@
 #! /bin/bash
-# Generate all the config files of the guestbook-go example from the Nickel
-# files.
+# Use the json_diff tool to compare the Nickel export and the original json.
 
 files=("guestbook-controller" "guestbook-service" "redis-master-service" "redis-master-controller" "redis-slave-controller" "redis-slave-service")
 
 for f in "${files[@]}"
 do
-    echo "** Exporting ${f}"
-    rm -f "${f}.ncl.json"
-    nickel -f "${f}.ncl" export -o "${f}.ncl.json"
+    echo "** Processing ${f}"
+    json_diff f "${f}.json" "${f}.ncl.json"
 done
 echo "Done."
