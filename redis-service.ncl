@@ -22,7 +22,7 @@ let config = import "config.ncl" in
         ports = [
           {
             name = "redis-server";
-            containerPort = 6379
+            port = 6379
           }
         ];
       }

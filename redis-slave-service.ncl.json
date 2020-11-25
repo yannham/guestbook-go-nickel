@@ -11,8 +11,8 @@
   "spec": {
     "ports": [
       {
-        "containerPort": 6379.0,
-        "name": "redis-server"
+        "name": "redis-server",
+        "port": 6379.0
       }
     ],
     "selector": {
