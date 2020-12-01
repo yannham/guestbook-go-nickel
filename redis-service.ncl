@@ -2,7 +2,7 @@ let config = import "config.ncl" in
 
 {
   mkRedisService = fun role_ =>
-    let name_ = "redis-${role_}" in
+    let name_ = "redis-#{role_}" in
 
     {
       kind = "Service";

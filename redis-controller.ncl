@@ -2,7 +2,7 @@ let config = import "config.ncl" in
 
 {
   mkRedisController = fun role_ image_ replicas_ =>
-    let name_ = "redis-${role_}" in
+    let name_ = "redis-#{role_}" in
     let metadata_ = {
       labels = {
         app = "redis";

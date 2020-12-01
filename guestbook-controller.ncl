@@ -18,7 +18,7 @@ let metadataBase = {
           containers = [
             {
               name = config.name;
-              image = "k8s.gcr.io/${name}:v3";
+              image = "k8s.gcr.io/#{name}:v3";
               ports = [
                 {
                   name = "http-server";
